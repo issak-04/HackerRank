@@ -41,3 +41,5 @@ My HackerRank Programs
 19)  https://www.hackerrank.com/challenges/py-set-add/problem?isFullScreen=true
 
 20)  https://www.hackerrank.com/challenges/python-time-delta/problem?isFullScreen=true
+
+21)  https://www.hackerrank.com/challenges/capitalize/problem?isFullScreen=true
