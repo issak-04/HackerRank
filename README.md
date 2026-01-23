@@ -31,3 +31,7 @@ My HackerRank Programs
 14)  https://www.hackerrank.com/challenges/default-arguments/problem?isFullScreen=true
 
 15)  https://www.hackerrank.com/challenges/standardize-mobile-number-using-decorators/problem?isFullScreen=true
+
+16)  https://www.hackerrank.com/challenges/list-comprehensions/problem?isFullScreen=true
+
+17)  
