@@ -34,4 +34,4 @@ My HackerRank Programs
 
 16)  https://www.hackerrank.com/challenges/list-comprehensions/problem?isFullScreen=true
 
-17)  
+17)  https://www.hackerrank.com/challenges/find-second-maximum-number-in-a-list/problem?isFullScreen=true
