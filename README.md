@@ -45,6 +45,3 @@ PYTHON:-
 21)  https://www.hackerrank.com/challenges/capitalize/problem?isFullScreen=true
 
 22)  https://www.hackerrank.com/challenges/py-check-subset/problem?isFullScreen=true
-
-
-......
