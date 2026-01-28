@@ -5,3 +5,5 @@ https://www.hackerrank.com/challenges/python-time-delta/problem?isFullScreen=tru
 https://www.hackerrank.com/challenges/list-comprehensions/problem?isFullScreen=true
 
 https://www.hackerrank.com/challenges/standardize-mobile-number-using-decorators/problem?isFullScreen=true
+
+https://www.hackerrank.com/challenges/py-set-intersection-operation/problem?isFullScreen=true
