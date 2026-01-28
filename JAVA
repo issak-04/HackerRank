@@ -1,3 +1,5 @@
 ALL MY JAVA PROGRAMS IN HACKERRANK :
 
 https://www.hackerrank.com/challenges/python-time-delta/problem?isFullScreen=true
+
+https://www.hackerrank.com/challenges/list-comprehensions/problem?isFullScreen=true
