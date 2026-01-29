@@ -9,3 +9,5 @@ C++ programs here:
 4) https://www.hackerrank.com/challenges/c-tutorial-for-loop/problem?isFullScreen=true
 
 5) https://www.hackerrank.com/challenges/c-tutorial-functions/problem?isFullScreen=true
+
+6) https://www.hackerrank.com/challenges/c-tutorial-pointer/problem?isFullScreen=true
