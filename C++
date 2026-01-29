@@ -2,3 +2,5 @@ C++ programs here:
 
 1) https://www.hackerrank.com/challenges/cpp-input-and-output/problem?isFullScreen=true
 
+2} https://www.hackerrank.com/challenges/c-tutorial-basic-data-types/problem?isFullScreen=true
+
