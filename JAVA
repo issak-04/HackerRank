@@ -1,9 +1,3 @@
 ALL MY JAVA PROGRAMS IN HACKERRANK :
 
-https://www.hackerrank.com/challenges/python-time-delta/problem?isFullScreen=true
-
-https://www.hackerrank.com/challenges/list-comprehensions/problem?isFullScreen=true
-
-https://www.hackerrank.com/challenges/standardize-mobile-number-using-decorators/problem?isFullScreen=true
-
-https://www.hackerrank.com/challenges/py-set-intersection-operation/problem?isFullScreen=true
+1)https://www.hackerrank.com/challenges/java-1d-array/problem?isFullScreen=true
