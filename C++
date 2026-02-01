@@ -21,3 +21,5 @@ C++ programs here:
 10) https://www.hackerrank.com/challenges/c-tutorial-class/problem?isFullScreen=true
 
 11) https://www.hackerrank.com/challenges/virtual-functions/problem?isFullScreen=true
+
+12) https://www.hackerrank.com/challenges/inherited-code/problem?isFullScreen=true
