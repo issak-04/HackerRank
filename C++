@@ -23,3 +23,6 @@ C++ programs here:
 11) https://www.hackerrank.com/challenges/virtual-functions/problem?isFullScreen=true
 
 12) https://www.hackerrank.com/challenges/inherited-code/problem?isFullScreen=true
+
+13) https://www.hackerrank.com/challenges/exceptional-server/problem?isFullScreen=true
+
