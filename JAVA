@@ -7,3 +7,5 @@ https://www.hackerrank.com/challenges/java-list/problem?isFullScreen=true
 https://www.hackerrank.com/challenges/phone-book/problem?isFullScreen=true
 
 https://www.hackerrank.com/challenges/tag-content-extractor/problem?isFullScreen=true
+
+https://www.hackerrank.com/challenges/java-singleton/problem?isFullScreen=true
