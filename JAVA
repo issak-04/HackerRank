@@ -67,9 +67,49 @@ public class Solution {
 
 3) https://www.hackerrank.com/challenges/java-list/problem?isFullScreen=true
 ----
+import java.util.*;
 
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        // Read initial list size
+        int n = scan.nextInt();
+
+        // Read list elements
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            list.add(scan.nextInt());
+        }
+
+        // Number of queries
+        int q = scan.nextInt();
+
+        // Process queries
+        while (q-- > 0) {
+            String query = scan.next();
+
+            if (query.equals("Insert")) {
+                int index = scan.nextInt();
+                int value = scan.nextInt();
+                list.add(index, value);
+            } else if (query.equals("Delete")) {
+                int index = scan.nextInt();
+                list.remove(index);
+            }
+        }
+
+        // Print final list
+        for (int num : list) {
+            System.out.print(num + " ");
+        }
+
+        scan.close();
+    }
+}
 
 4) https://www.hackerrank.com/challenges/phone-book/problem?isFullScreen=true
+-----
 
 5) https://www.hackerrank.com/challenges/tag-content-extractor/problem?isFullScreen=true
 
