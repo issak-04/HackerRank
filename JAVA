@@ -1,11 +1,76 @@
 ALL MY JAVA PROGRAMS IN HACKERRANK :
 
-https://www.hackerrank.com/challenges/java-1d-array/problem?isFullScreen=true
+1) https://www.hackerrank.com/challenges/java-stdin-and-stdout-1/problem?isFullScreen=true
+Program--
+import java.util.*;
 
-https://www.hackerrank.com/challenges/java-list/problem?isFullScreen=true
+public class Solution {
 
-https://www.hackerrank.com/challenges/phone-book/problem?isFullScreen=true
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        int b = scan.nextInt();
+        int c = scan.nextInt();
 
-https://www.hackerrank.com/challenges/tag-content-extractor/problem?isFullScreen=true
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+    }
+}
 
-https://www.hackerrank.com/challenges/java-singleton/problem?isFullScreen=true
+2) https://www.hackerrank.com/challenges/java-1d-array/problem?isFullScreen=true
+Program--
+import java.util.*;
+
+public class Solution {
+
+    public static boolean canWin(int leap, int[] game) {
+        boolean[] visited = new boolean[game.length];
+        return canReach(0, leap, game, visited);
+    }
+
+    private static boolean canReach(int i, int leap, int[] game, boolean[] visited) {
+        // If we reach or go past the end, we win
+        if (i >= game.length) return true;
+
+        // Invalid position
+        if (i < 0 || game[i] == 1 || visited[i]) return false;
+
+        // Mark this index as visited
+        visited[i] = true;
+
+        // Try all possible moves
+        return canReach(i + leap, leap, game, visited) ||
+               canReach(i + 1, leap, game, visited) ||
+               canReach(i - 1, leap, game, visited);
+    }
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int q = scan.nextInt();
+
+        while (q-- > 0) {
+            int n = scan.nextInt();
+            int leap = scan.nextInt();
+
+            int[] game = new int[n];
+            for (int i = 0; i < n; i++) {
+                game[i] = scan.nextInt();
+            }
+
+            System.out.println(canWin(leap, game) ? "YES" : "NO");
+        }
+
+        scan.close();
+    }
+}
+
+3) https://www.hackerrank.com/challenges/java-list/problem?isFullScreen=true
+----
+
+
+4) https://www.hackerrank.com/challenges/phone-book/problem?isFullScreen=true
+
+5) https://www.hackerrank.com/challenges/tag-content-extractor/problem?isFullScreen=true
+
+6) https://www.hackerrank.com/challenges/java-singleton/problem?isFullScreen=true
