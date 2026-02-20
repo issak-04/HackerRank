@@ -1,6 +1,29 @@
 ALL MY JAVA PROGRAMS IN HACKERRANK :
 
-1) https://www.hackerrank.com/challenges/java-stdin-and-stdout-1/problem?isFullScreen=true
+1) https://www.hackerrank.com/challenges/java-stdin-stdout/problem?isFullScreen=true
+Program---
+import java.util.Scanner;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int i = scan.nextInt();
+
+        // Write your code here.
+         double d = scan.nextDouble();
+        scan.nextLine(); // consume leftover newline
+
+        String s = scan.nextLine();
+
+
+        System.out.println("String: " + s);
+        System.out.println("Double: " + d);
+        System.out.println("Int: " + i);
+    }
+}
+
+2) https://www.hackerrank.com/challenges/java-stdin-and-stdout-1/problem?isFullScreen=true
 Program--
 import java.util.*;
 
@@ -18,7 +41,7 @@ public class Solution {
     }
 }
 
-2) https://www.hackerrank.com/challenges/java-1d-array/problem?isFullScreen=true
+3) https://www.hackerrank.com/challenges/java-1d-array/problem?isFullScreen=true
 Program--
 import java.util.*;
 
@@ -65,7 +88,7 @@ public class Solution {
     }
 }
 
-3) https://www.hackerrank.com/challenges/java-list/problem?isFullScreen=true
+4) https://www.hackerrank.com/challenges/java-list/problem?isFullScreen=true
 ----
 import java.util.*;
 
@@ -108,7 +131,7 @@ public class Solution {
     }
 }
 
-4) https://www.hackerrank.com/challenges/tag-content-extractor/problem?isFullScreen=true
+5) https://www.hackerrank.com/challenges/tag-content-extractor/problem?isFullScreen=true
 ----
 import java.io.*;
 import java.util.*;
@@ -143,7 +166,7 @@ public class Solution{
 	}
 }
 
-5) https://www.hackerrank.com/challenges/java-singleton/problem?isFullScreen=true
+6) https://www.hackerrank.com/challenges/java-singleton/problem?isFullScreen=true
 ----
 import java.io.*;
 import java.util.*;
@@ -170,4 +193,65 @@ class Singleton{
 
 }
 
-6) 
+7) https://www.hackerrank.com/challenges/java-if-else/problem?isFullScreen=true
+---
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int N = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        if (N % 2 == 1) {
+            System.out.println("Weird");
+        } else if (N >= 2 && N <= 5) {
+            System.out.println("Not Weird");
+        } else if (N >= 6 && N <= 20) {
+            System.out.println("Weird");
+        } else {
+            System.out.println("Not Weird");
+        }
+
+        scanner.close();
+    }
+}
+
+8) https://www.hackerrank.com/challenges/java-regex/problem?isFullScreen=true
+----
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.Scanner;
+
+class Solution{
+
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        while(in.hasNext()){
+            String IP = in.next();
+            System.out.println(IP.matches(new MyRegex().pattern));
+        }
+
+    }
+}
+
+//Write your code here
+class MyRegex {
+    String pattern =
+        "^((25[0-5]|2[0-4][0-9]|1[0-9]{2}|0?[0-9]{1,2})\\.){3}" +
+        "(25[0-5]|2[0-4][0-9]|1[0-9]{2}|0?[0-9]{1,2})$";
+}
+
+9) 
+
+
