@@ -252,6 +252,149 @@ class MyRegex {
         "(25[0-5]|2[0-4][0-9]|1[0-9]{2}|0?[0-9]{1,2})$";
 }
 
-9) 
+9) https://www.hackerrank.com/challenges/java-bigdecimal/problem?isFullScreen=true
+-----
+import java.math.BigDecimal;
+import java.util.*;
+class Solution{
+
+    public static void main(String []args){
+        //Input
+        Scanner sc= new Scanner(System.in);
+        int n=sc.nextInt();
+        String []s=new String[n+2];
+        for(int i=0;i<n;i++){
+            s[i]=sc.next();
+        }
+      	sc.close();
+
+        //Write your code here
+        Arrays.sort(s, 0, n, new Comparator<String>() {
+    @Override
+    public int compare(String a, String b) {
+        BigDecimal bd1 = new BigDecimal(a);
+        BigDecimal bd2 = new BigDecimal(b);
+        return bd2.compareTo(bd1); // descending order
+    }
+});
+
+        //Output
+        for(int i=0;i<n;i++)
+        {
+            System.out.println(s[i]);
+        }
+    }
+
+}
+
+10) https://www.hackerrank.com/challenges/sha-256/problem?isFullScreen=true
+---
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+String s = sc.next();
+sc.close();
+
+try {
+    java.security.MessageDigest md = java.security.MessageDigest.getInstance("SHA-256");
+    byte[] hash = md.digest(s.getBytes("UTF-8"));
+
+    for (byte b : hash) {
+        System.out.printf("%02x", b);
+    }
+} catch (Exception e) {
+    e.printStackTrace();
+}
+    }
+}
+
+11) https://www.hackerrank.com/challenges/java-lambda-expressions/problem?isFullScreen=true
+----
+import java.io.*;
+import java.util.*;
+
+interface PerformOperation {
+    boolean check(int a);
+}
+
+class MyMath {
+
+    public boolean checker(PerformOperation p, int num) {
+        return p.check(num);
+    }
+
+    PerformOperation isOdd() {
+        return new PerformOperation() {
+            public boolean check(int a) {
+                return a % 2 != 0;
+            }
+        };
+    }
+
+    PerformOperation isPrime() {
+        return new PerformOperation() {
+            public boolean check(int a) {
+                if (a < 2) return false;
+                for (int i = 2; i <= Math.sqrt(a); i++) {
+                    if (a % i == 0) return false;
+                }
+                return true;
+            }
+        };
+    }
+
+    PerformOperation isPalindrome() {
+        return new PerformOperation() {
+            public boolean check(int a) {
+                String s = Integer.toString(a);
+                String r = new StringBuilder(s).reverse().toString();
+                return s.equals(r);
+            }
+        };
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+        MyMath ob = new MyMath();
+
+        while (T-- > 0) {
+            int ch = sc.nextInt();
+            int num = sc.nextInt();
+            PerformOperation op;
+            boolean result;
+
+            if (ch == 1) {
+                op = ob.isOdd();
+                result = ob.checker(op, num);
+                System.out.println(result ? "ODD" : "EVEN");
+            }
+            else if (ch == 2) {
+                op = ob.isPrime();
+                result = ob.checker(op, num);
+                System.out.println(result ? "PRIME" : "COMPOSITE");
+            }
+            else if (ch == 3) {
+                op = ob.isPalindrome();
+                result = ob.checker(op, num);
+                System.out.println(result ? "PALINDROME" : "NOT PALINDROME");
+            }
+        }
+        sc.close();
+    }
+}
+
+12) 
 
 
