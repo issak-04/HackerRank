@@ -120,4 +120,24 @@ SELECT COUNT(CITY) - COUNT(DISTINCT CITY) FROM STATION;
 */
 Select Decimal(Sqrt(Power(Max(LAT_N) - Min(LAT_N),2) + Power(Max(LONG_W) - Min(LONG_W),2)),20,4) From STATION;
 
-13) 
+13) https://www.hackerrank.com/challenges/interviews/problem?isFullScreen=true
+----
+/*
+    Enter your query here and follow these instructions:
+    1. Please append a semicolon ";" at the end of the query and enter your query in a single line to avoid error.
+    2. The AS keyword causes errors, so follow this convention: "Select t.Field From table1 t" instead of "select t.Field From table1 AS t"
+    3. Type your code immediately after comment. Don't leave any blank line.
+*/
+Select c.contest_id, c.hacker_id, c.name, Coalesce(Sum(ss.total_submissions),0), Coalesce(Sum(ss.total_accepted_submissions),0), Coalesce(Sum(vs.total_views),0), Coalesce(Sum(vs.total_unique_views),0) From Contests c Left Join Colleges col On c.contest_id = col.contest_id Left Join Challenges ch On col.college_id = ch.college_id Left Join (Select challenge_id, Sum(total_submissions) total_submissions, Sum(total_accepted_submissions) total_accepted_submissions From Submission_Stats Group By challenge_id) ss On ch.challenge_id = ss.challenge_id Left Join (Select challenge_id, Sum(total_views) total_views, Sum(total_unique_views) total_unique_views From View_Stats Group By challenge_id) vs On ch.challenge_id = vs.challenge_id Group By c.contest_id, c.hacker_id, c.name Having Coalesce(Sum(ss.total_submissions),0) + Coalesce(Sum(ss.total_accepted_submissions),0) + Coalesce(Sum(vs.total_views),0) + Coalesce(Sum(vs.total_unique_views),0) > 0 Order By c.contest_id;
+
+14) https://www.hackerrank.com/challenges/full-score/problem?isFullScreen=true
+----
+/*
+    Enter your query here and follow these instructions:
+    1. Please append a semicolon ";" at the end of the query and enter your query in a single line to avoid error.
+    2. The AS keyword causes errors, so follow this convention: "Select t.Field From table1 t" instead of "select t.Field From table1 AS t"
+    3. Type your code immediately after comment. Don't leave any blank line.
+*/
+Select h.hacker_id, h.name From Hackers h Join (Select s.hacker_id, Count(Distinct s.challenge_id) full_count From Submissions s Join Challenges c On s.challenge_id = c.challenge_id Join Difficulty d On c.difficulty_level = d.difficulty_level Where s.score = d.score Group By s.hacker_id Having Count(Distinct s.challenge_id) > 1) x On h.hacker_id = x.hacker_id Order By x.full_count Desc, h.hacker_id Asc;
+
+15) 
