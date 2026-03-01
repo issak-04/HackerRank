@@ -140,4 +140,15 @@ Select c.contest_id, c.hacker_id, c.name, Coalesce(Sum(ss.total_submissions),0),
 */
 Select h.hacker_id, h.name From Hackers h Join (Select s.hacker_id, Count(Distinct s.challenge_id) full_count From Submissions s Join Challenges c On s.challenge_id = c.challenge_id Join Difficulty d On c.difficulty_level = d.difficulty_level Where s.score = d.score Group By s.hacker_id Having Count(Distinct s.challenge_id) > 1) x On h.hacker_id = x.hacker_id Order By x.full_count Desc, h.hacker_id Asc;
 
-15) 
+15) https://www.hackerrank.com/challenges/the-company/problem?isFullScreen=true
+----
+
+/*
+    Enter your query here and follow these instructions:
+    1. Please append a semicolon ";" at the end of the query and enter your query in a single line to avoid error.
+    2. The AS keyword causes errors, so follow this convention: "Select t.Field From table1 t" instead of "select t.Field From table1 AS t"
+    3. Type your code immediately after comment. Don't leave any blank line.
+*/
+Select c.company_code, c.founder, Count(Distinct lm.lead_manager_code), Count(Distinct sm.senior_manager_code), Count(Distinct m.manager_code), Count(Distinct e.employee_code) From Company c Left Join Lead_Manager lm On c.company_code = lm.company_code Left Join Senior_Manager sm On c.company_code = sm.company_code Left Join Manager m On c.company_code = m.company_code Left Join Employee e On c.company_code = e.company_code Group By c.company_code, c.founder Order By c.company_code;
+
+16) 
