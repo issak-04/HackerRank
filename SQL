@@ -171,4 +171,14 @@ SELECT w.id, wp.age, w.coins_needed, w.power FROM Wands w JOIN Wands_Property wp
 */
 SELECT h.hacker_id, h.name, COUNT(c.challenge_id) total_count FROM Hackers h JOIN Challenges c ON h.hacker_id = c.hacker_id GROUP BY h.hacker_id, h.name HAVING COUNT(c.challenge_id) = (SELECT MAX(temp1.cnt) FROM (SELECT COUNT(challenge_id) cnt FROM Challenges GROUP BY hacker_id) temp1) OR COUNT(c.challenge_id) IN (SELECT temp2.cnt FROM (SELECT COUNT(challenge_id) cnt FROM Challenges GROUP BY hacker_id) temp2 GROUP BY temp2.cnt HAVING COUNT(temp2.cnt) = 1) ORDER BY total_count DESC, h.hacker_id;
 
-18) 
+18) https://www.hackerrank.com/challenges/sql-projects/problem?isFullScreen=true
+---
+/*
+    Enter your query here and follow these instructions:
+    1. Please append a semicolon ";" at the end of the query and enter your query in a single line to avoid error.
+    2. The AS keyword causes errors, so follow this convention: "Select t.Field From table1 t" instead of "select t.Field From table1 AS t"
+    3. Type your code immediately after comment. Don't leave any blank line.
+*/
+SELECT s.Start_Date, MIN(e.End_Date) FROM (SELECT Start_Date FROM Projects WHERE Start_Date NOT IN (SELECT End_Date FROM Projects)) s, (SELECT End_Date FROM Projects WHERE End_Date NOT IN (SELECT Start_Date FROM Projects)) e WHERE s.Start_Date < e.End_Date GROUP BY s.Start_Date ORDER BY (MIN(e.End_Date) - s.Start_Date), s.Start_Date;
+
+19) 
