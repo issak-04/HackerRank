@@ -181,4 +181,14 @@ SELECT h.hacker_id, h.name, COUNT(c.challenge_id) total_count FROM Hackers h JOI
 */
 SELECT s.Start_Date, MIN(e.End_Date) FROM (SELECT Start_Date FROM Projects WHERE Start_Date NOT IN (SELECT End_Date FROM Projects)) s, (SELECT End_Date FROM Projects WHERE End_Date NOT IN (SELECT Start_Date FROM Projects)) e WHERE s.Start_Date < e.End_Date GROUP BY s.Start_Date ORDER BY (MIN(e.End_Date) - s.Start_Date), s.Start_Date;
 
-19) 
+19) https://www.hackerrank.com/challenges/placements/problem?isFullScreen=true
+----
+/*
+    Enter your query here and follow these instructions:
+    1. Please append a semicolon ";" at the end of the query and enter your query in a single line to avoid error.
+    2. The AS keyword causes errors, so follow this convention: "Select t.Field From table1 t" instead of "select t.Field From table1 AS t"
+    3. Type your code immediately after comment. Don't leave any blank line.
+*/
+SELECT s.Name FROM Students s JOIN Friends f ON s.ID = f.ID JOIN Packages p1 ON s.ID = p1.ID JOIN Packages p2 ON f.Friend_ID = p2.ID WHERE p2.Salary > p1.Salary ORDER BY p2.Salary;
+
+20) 
